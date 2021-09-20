@@ -16,11 +16,21 @@ poetry install
 
 # API Server
 
-Run server with:
+## Run server
 
-```sh
-poetry run uvicorn oauth_app.main:app --reload
-```
+   Run server with:
+
+   ```sh
+   poetry run uvicorn oauth_app.main:app --reload
+   ```
+
+## API
+
+Available at: http://localhost:8000/
+
+## OpenAPI docs
+
+Visit http://localhost:8000/docs#/
 
 # Database
 
