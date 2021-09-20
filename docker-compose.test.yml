@@ -1,0 +1,8 @@
+# This is the test docker compose that is used during testing only.
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres-TEST
+    ports:
+      - ${POSTGRES_TEST_PORT}:5432

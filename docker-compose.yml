@@ -1,0 +1,16 @@
+# This is the base docker-compose.
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres-DEV
+    image: postgres:13
+    environment:
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASS}
+    healthcheck:
+        test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}", "-d", "${POSTGRES_DB}"]
+        interval: 5s
+        retries: 5
+    restart: always

@@ -1,0 +1,13 @@
+# This is the dev docker compose that will automatically get used when calling `docker-compose up`.
+version: '3'
+
+services:
+  postgres:
+    ports:
+      - ${POSTGRES_DEV_PORT}:5432
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+
+volumes:
+  # Persists data in a docker volume
+  postgres-db-volume:
