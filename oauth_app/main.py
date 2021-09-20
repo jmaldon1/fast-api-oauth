@@ -13,7 +13,6 @@ from oauth_app.app import models
 from oauth_app.app import schemas
 from oauth_app.app import crud
 from oauth_app.app import security
-from oauth_app.app.security import fake_hash_password
 from oauth_app.app.deps import (
     get_db,
     get_current_active_superuser,

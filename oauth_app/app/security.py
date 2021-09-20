@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
 from pydantic import EmailStr
-from jose import JWTError, jwt
+from jose import jwt
 
 from oauth_app.app import crud
 from oauth_app.app import models
